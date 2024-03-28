@@ -1,16 +1,16 @@
 name: Putative lineage proposal
 description: Use this template to suggest a new lineage
-title: "[NEW LINEAGE PROPPOSAL]: "
+title: "[NEW LINEAGE PROPOSAL]: "
 labels: ["lineage proposal"]
 body:
   - type: markdown
-    attributes: | 
-    Thanks for taking the time to propose a new lineage!
+    attributes: Thanks for taking the time to propose a new lineage!
 
   - type: checkboxes
     id: mutations
     attributes:
       label: is it phylogentically distinct enough?
+      options:
       - label: There are at least 25 inferred substitutions along the preceding branch
         required: true
 
@@ -18,6 +18,7 @@ body:
     id: size
     attributes:
       label: is it big enough?
+      options:
       - label: There are at least 15 sequences in the clade
         required: true
 
@@ -25,6 +26,7 @@ body:
     id: sister
     attributes:
       label: is there a sister lineage?
+      options:
       - label: There is at least one other lineage meeting size/distance criteria the same number of nodes from the root
         required: true
 
@@ -61,6 +63,7 @@ body:
     id: name-check
     attributes:
       label: is the name currently available?
+      options:
       - label: I have checked the available putative names
         required: true
 
