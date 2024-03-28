@@ -5,7 +5,7 @@ labels: ["lineage proposal"]
 body:
   - type: markdown
     attributes: 
-      value: Thanks for taking the time to propose a new lineage!
+      value: Thanks for taking the time to propose a new lineage! Please read instructions [here](https://denv-lineages.github.io/_pages/rules/) before suggesting a lineage
 
   - type: checkboxes
     id: mutations
@@ -13,7 +13,7 @@ body:
       label: is it phylogentically distinct enough?
       options:
       - label: There are at least 25 inferred substitutions along the preceding branch
-        required: true
+        required: false
 
   - type: checkboxes
     id: size
@@ -21,7 +21,7 @@ body:
       label: is it big enough?
       options:
       - label: There are at least 15 sequences in the clade
-        required: true
+        required: false
 
   - type: checkboxes
     id: sister
@@ -29,7 +29,7 @@ body:
       label: is there a sister lineage?
       options:
       - label: There is at least one other lineage meeting size/distance criteria the same number of nodes from the root
-        required: true
+        required: false
 
   - type: textarea
     id: evidence
@@ -43,7 +43,7 @@ body:
   - type: dropdown
     id: serotype
     attributes:
-      label: what serotype is it part of?
+      label: What serotype is it part of?
       multiple: true
       options:
       - DENV1
@@ -54,9 +54,37 @@ body:
      required: true
 
   - type: dropdown
+    id: genotype
+    attributes:
+      label: What genotype is it a part of?
+      multiple: true
+      options:
+        - 1I
+        - 1II
+        - 1III
+        - 1IV
+        - 1V
+        - 1VI
+        - 2I
+        - 2II
+        - 2III
+        - 2IV
+        - 2V
+        - 2VI
+        - 3I
+        - 3II
+        - 3III
+        - 3IV
+        - 3V
+        - 4I
+        - 4II
+        - 4III
+        - 4IV
+
+  - type: dropdown
     id: maj-min
     attributes:
-      label: is it a major lineage or a minor lineage?
+      label: Are you prosing a major lineage or a minor lineage?
       multiple: true
       options:
         - major
@@ -65,7 +93,7 @@ body:
   - type: checkboxes
     id: name-check
     attributes:
-      label: is the name currently available?
+      label: Is the name currently available?
       options:
       - label: I have checked the available putative names
         required: true
@@ -73,7 +101,7 @@ body:
   - type: textarea
     id: lineage-name
     attributes:
-      label: suggested name of the lineage
+      label: Suggested name of the lineage
       description: suggested name of the lineage 
     validations:
       required: false
@@ -81,7 +109,7 @@ body:
   - type: textarea
     id: tip-names
     attributes:
-      label: tip labels in lineage
+      label: Accession IDs of sequences in the lineage
       description: please provide genbank or gisaid IDs for the the sequences the clade 
 
   - type: textarea
