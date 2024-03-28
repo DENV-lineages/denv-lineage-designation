@@ -4,7 +4,8 @@ title: "[NEW LINEAGE PROPOSAL]: "
 labels: ["lineage proposal"]
 body:
   - type: markdown
-    attributes: Thanks for taking the time to propose a new lineage!
+    attributes: 
+      value: Thanks for taking the time to propose a new lineage!
 
   - type: checkboxes
     id: mutations
@@ -35,29 +36,31 @@ body:
     attributes:
       label: Evidence of rules
       description: Please provide number of mutations on branch leading up to clade, number of sequences in clade, and picture of phylogenetic area containing sister lineage
-      validations:
-        required: true
+    validations:
+      required: true
 
 
   - type: dropdown
     id: serotype
-    label: what serotype is it part of?
-    multiple: true
-    options:
-     - DENV1
-     - DENV2
-     - DENV3
-     - DENV4
+    attributes:
+      label: what serotype is it part of?
+      multiple: true
+      options:
+      - DENV1
+      - DENV2
+      - DENV3
+      - DENV4
     validations:
      required: true
 
   - type: dropdown
     id: maj-min
-    label: is it a major lineage or a minor lineage?
-    multiple: true
-    options:
-      - major
-      - minor
+    attributes:
+      label: is it a major lineage or a minor lineage?
+      multiple: true
+      options:
+        - major
+        - minor
 
   - type: checkboxes
     id: name-check
