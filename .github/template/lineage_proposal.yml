@@ -1,0 +1,87 @@
+name: Putative lineage proposal
+description: Use this template to suggest a new lineage
+title: "[NEW LINEAGE PROPPOSAL]: "
+labels: ["lineage proposal"]
+body:
+  - type: markdown
+    attributes: | 
+    Thanks for taking the time to propose a new lineage!
+
+  - type: checkboxes
+    id: mutations
+    attributes:
+      label: is it phylogentically distinct enough?
+      - label: There are at least 25 inferred substitutions along the preceding branch
+        required: true
+
+  - type: checkboxes
+    id: size
+    attributes:
+      label: is it big enough?
+      - label: There are at least 15 sequences in the clade
+        required: true
+
+  - type: checkboxes
+    id: sister
+    attributes:
+      label: is there a sister lineage?
+      - label: There is at least one other lineage meeting size/distance criteria the same number of nodes from the root
+        required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence of rules
+      description: Please provide number of mutations on branch leading up to clade, number of sequences in clade, and picture of phylogenetic area containing sister lineage
+      validations:
+        required: true
+
+
+  - type: dropdown
+    id: serotype
+    label: what serotype is it part of?
+    multiple: true
+    options:
+     - DENV1
+     - DENV2
+     - DENV3
+     - DENV4
+    validations:
+     required: true
+
+  - type: dropdown
+    id: maj-min
+    label: is it a major lineage or a minor lineage?
+    multiple: true
+    options:
+      - major
+      - minor
+
+  - type: checkboxes
+    id: name-check
+    attributes:
+      label: is the name currently available?
+      - label: I have checked the available putative names
+        required: true
+
+  - type: textarea
+    id: lineage-name
+    attributes:
+      label: suggested name of the lineage
+      description: suggested name of the lineage 
+    validations:
+      required: false
+
+  - type: textarea
+    id: tip-names
+    attributes:
+      label: tip labels in lineage
+      description: please provide genbank or gisaid IDs for the the sequences the clade 
+
+  - type: textarea
+    id: lineage-description
+    attributes:
+      label: Description of the lineage
+      description: Anything else you want us to know about the lineage? (optional)
+    validations:
+      required: false
