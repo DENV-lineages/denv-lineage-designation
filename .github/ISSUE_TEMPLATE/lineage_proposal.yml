@@ -12,7 +12,7 @@ body:
     attributes:
       label: is it phylogentically distinct enough?
       options:
-      - label: There are at least 25 inferred substitutions along the preceding branch
+      - label: There are at least *20* inferred substitutions along the preceding branch for minor lineages or 25 for major
         required: false
 
   - type: checkboxes
@@ -28,7 +28,7 @@ body:
     attributes:
       label: is there a sister lineage?
       options:
-      - label: There is at least one other lineage meeting size/distance criteria the same number of nodes from the root
+      - label: There is at least one other lineage meeting size/distance criteria at the same level of designation
         required: false
 
   - type: textarea
@@ -65,6 +65,7 @@ body:
         - 1IV
         - 1V
         - 1VI
+        - 1VII
         - 2I
         - 2II
         - 2III
